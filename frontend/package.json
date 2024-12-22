@@ -2,11 +2,10 @@
   "name": "cuentas",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+  "start": "ng serve",
+  "build": "npm install && ng build",
+  "watch": "ng build --watch --configuration development",
+  "test": "ng test"
   },
   "private": true,
   "dependencies": {
@@ -31,7 +30,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^18.1.3",
-    "@angular/cli": "^18.2.4",
+    "@angular/cli": "^18.2.12",
     "@angular/compiler-cli": "^18.1.0",
     "@types/jasmine": "~5.1.0",
     "jasmine-core": "~5.1.0",
