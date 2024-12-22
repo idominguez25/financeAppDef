@@ -2,11 +2,11 @@
     "builds": [
       {
         "src": "package.json",
-        "use": "@vercel/node"
+        "use": "@vercel/node",
+        "config": {
+          "buildCommand": "npm run vercel-build"
+        }
       }
-    ],
-    "env": {
-      "NODE_ENV": "production"
-    }
+    ]
   }
   
