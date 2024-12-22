@@ -1,0 +1,17 @@
+.tabla{
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+  align-items: center;
+}
+
+button {
+  border-radius: 5px;              /* Bordes rectos */
+  text-transform: none;    
+  margin-bottom: 10px; 
+}
+
+.example-button-row {
+  display: table-cell;
+  max-width: 600px;
+}

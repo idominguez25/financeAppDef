@@ -1,0 +1,32 @@
+<div class="tabla">
+  <!-- Botón añadir -->
+  <div class="buttonAñadir">
+    <button mat-flat-button (click)="abrirDialog()">
+      Añadir gasto
+    </button>
+  </div>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <!-- Name Column -->
+    <ng-container matColumnDef="nombre">
+      <th mat-header-cell *matHeaderCellDef> Nombre </th>
+      <td mat-cell *matCellDef="let gasto"> {{gasto.descripcion}} </td>
+    </ng-container>
+
+    <!-- Cantidad Column -->
+    <ng-container matColumnDef="cantidad">
+      <th mat-header-cell *matHeaderCellDef> Cantidad </th>
+      <td mat-cell *matCellDef="let gasto"> {{gasto.cantidad}}€ </td>
+    </ng-container>
+
+    <!-- Buttons Column -->
+    <ng-container matColumnDef="acciones">
+      <th mat-header-cell *matHeaderCellDef>Acciones</th>
+      <td mat-cell *matCellDef="let gasto;index as i">
+        <button mat-icon-button color="primary" (click)="editarGastoDialog(gasto)"><mat-icon>edit</mat-icon></button>
+        <button mat-icon-button color="warn" (click)="eliminarGasto(gasto)"><mat-icon>delete</mat-icon></button>
+      </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

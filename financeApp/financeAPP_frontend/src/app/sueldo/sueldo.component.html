@@ -1,0 +1,23 @@
+<html>
+<body>
+  <div class="container">
+    <div class="input-container">
+      <mat-form-field class="input-full-width" id="formIngreso">
+        <mat-label>Sueldo</mat-label>
+        <input matInput id="ingresos" [(ngModel)]="sueldo" aria-describedby="botonCalcular">
+      </mat-form-field>
+      <button name="btningresos" mat-button id="botonCalcular" (click)="calcularResultados()">Calcular</button>
+    </div>
+
+    <div class="resultados">
+      <div *ngIf="mostrarResultados">
+        <p>Total de gastos: {{sumaGastos}}€<br>
+           Dinero restante: {{dineroRestante}}€<br>
+           Margen: {{dineroCaprichos}}€<br>
+           Ahorro: {{ahorro}}€
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
