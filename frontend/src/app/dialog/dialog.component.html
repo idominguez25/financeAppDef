@@ -1,0 +1,17 @@
+<form class="formDialog">
+  <h3>Añadir nuevo gasto</h3>
+  <mat-form-field>
+    <mat-label>Descripción</mat-label>
+    <input matInput [(ngModel)]="descripcion" name="descripcion" required="true" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Cantidad</mat-label>
+    <input matInput [(ngModel)]="cantidad" name="cantidad" required="true">
+  </mat-form-field>
+
+  <div mat-dialog-actions>
+    <button mat-button color="primary" type="submit" (click)="addGasto()">Añadir</button>
+    <button mat-button (click)="close()">Cancelar</button>
+  </div>
+</form>
